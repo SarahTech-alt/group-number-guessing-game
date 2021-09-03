@@ -15,25 +15,24 @@ function getGuesses(){
     method: 'POST',
     url: '/guesses',
     data: playerGuesses,
-  }).then(displayGuesses).catch(errorPostingGuesses)
+  }).then(appendResultsToDom).catch(errorPostingGuesses)
 }
 
-function displayGuesses() {
-  $.ajax({
-    method: 'GET',
-    url: '/guesses'
-  }).then(appendResultsToDom).catch(displayError)
-  }
+// function displayGuesses() {
+//   $.ajax({
+//     method: 'GET',
+//     url: '/guesses'
+//   }).then(appendResultsToDom).catch(displayError)
+//   }
 
 function appendResultsToDom(response){
-  let valueCounter = 0;
-  console.log(valueCounter);
-
+  // let valueCounter = 0;
+  // console.log(valueCounter);
   console.log('Displaying Guesses');
   console.log(response);
-  valueCounter++;
+  // valueCounter++;
   console.log(valueCounter);
-  $('#counter-here').append(valueCounter)
+  // $('#counter-here').append(valueCounter)
   for (const item of response){
     $('#guess-placeholder').append(`<li>${item}</li>`)
   }

@@ -16,19 +16,12 @@ app.use(express.static('server/public'));
 // GET & POST Routes go here
 
 let playerOneWon;
-let playerGuesses = [];
+let currentGuess = [];
 
 app.post('/guesses', (req,res) => {
   console.log('in POST /guesses');
   const guessToCheck = req.body;
-res.send('Sucess!');
-});
-
-app.listen(PORT, () => {
-  console.log ('Server is running on port', PORT)
-})
-
-app.get('/guesses'), (req,res) => {
+  currentGuess.push(guessToCheck);
   const numberToGuess = 5;
   if (guessToCheck.playerOneGuess == numberToGuess){
     //console.log('Player One Won!');
@@ -37,5 +30,13 @@ app.get('/guesses'), (req,res) => {
   else {
      playerOneWon = 'Player One is Not the Winner'
   }
-  res.send(playerOneWon);
-}
+  res.send(currentGuess);
+});
+
+app.listen(PORT, () => {
+  console.log ('Server is running on port', PORT)
+})
+
+// app.get('/guesses'), (req,res) => {
+  
+// }
