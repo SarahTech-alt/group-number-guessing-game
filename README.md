@@ -8,10 +8,10 @@ In this challenge, you will be creating a number guessing game! You'll have plen
 
 ## Base Mode
 
-- Add random number function to server
-- Add 3 input fields on index 
-- Add 1 submit button on index
-- Add a number of rounds counter div on index
+- [x] Add random number function to server
+- [x] Add 3 input fields on index 
+- [x] Add 1 submit button on index
+- [x] Add a number of rounds counter div on index
 - In client create a fuction to get inputs, and store in a variable
 - Add POST capability to send to the server
 - Check each guess on the server side
