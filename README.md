@@ -8,6 +8,22 @@ In this challenge, you will be creating a number guessing game! You'll have plen
 
 ## Base Mode
 
+- Add random number function to server
+- Add 3 input fields on index 
+- Add 1 submit button on index
+- Add a number of rounds counter div on index
+- In client create a fuction to get inputs, and store in a variable
+- Add POST capability to send to the server
+- Check each guess on the server side
+- Return the guesses in a get function and send to client
+- Append the data with GET function in client
+- Alert the user if guess was correct, too low or too high
+- Track the guess history on the DOM with client side
+- If there is a winner display on DOM
+- Restart the game
+
+
+
 You should generate a random number between 1 and 25 on the server. Add input fields to match the number of people in your group. Each member of your group will submit a guess at the same time. All of the guesses should be sent to the server (POST). The server will check each guess against the random number. After submitting a round of guesses, retrieve all of the previous guesses (GET) and display them on the screen. Let each user know whether their guess was correct, too low or too high. 
 
 - an input field for each of the Players to make a guess
